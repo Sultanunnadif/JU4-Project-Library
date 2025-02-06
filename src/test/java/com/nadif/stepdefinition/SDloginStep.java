@@ -31,18 +31,22 @@ public class SDloginStep extends SDBase{
     public void userInputEmailTextBoxWith(String username) {
         //By usernameInputTest = By.cssSelector("input#user-name");
         //driver.findElement(usernameInputTest).sendKeys(username); //digunakan disini klo tidak ada BaseSauce
+        loginPage.inputUsername(username);
+
     }
 
     @And("user input password on text box {string}")
     public void userInputPasswordOnTextBox(String password) {
         //By paswordInputTest = By.xpath("//*[@id=\"password\"]");
         //driver.findElement(paswordInputTest).sendKeys(password); //digunakan disini klo tidak ada BaseSauce
+        loginPage.inputPassword(password);
     }
 
     @And("user click Login button")
     public void userClickLoginButton() {
         //By loginButton = By.id("login-button");
         //driver.findElement(loginButton).click(); //digunakan disini klo tidak ada BaseSauce
+        loginPage.loginButton();
     }
 
 //    @Then("user will redirect to homepage") //Pindah ke homeStep
@@ -53,12 +57,13 @@ public class SDloginStep extends SDBase{
 //        assertEquals("Sauce Labs Backpack",productElement.getText());
 //    }
 
-    @Then("user will redirect to homepage")
-    public void userWillRedirectToHomepage() {
-    }
+//    @Then("user will redirect to homepage")
+//    public void userWillRedirectToHomepage() {
+//    }
 
     @And("user see error message {string}")
     public void userSeeErrorMessage(String errorMessage) {
         //assertTrue(driver.getPageSource().contains(errorMessage)); //digunakan disini klo tidak ada BaseSauce
+        loginPage.validatedError(errorMessage);
     }
 }
