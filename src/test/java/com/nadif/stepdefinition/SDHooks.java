@@ -1,8 +1,9 @@
-package com.nadif.hooks;
+package com.nadif.stepdefinition;
 
 import com.Base.SDBase;
-import org.junit.After;
-import org.junit.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
 
 public class SDHooks extends SDBase {
     @Before

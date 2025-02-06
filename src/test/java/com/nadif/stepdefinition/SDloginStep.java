@@ -7,8 +7,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static com.Base.SDBase.driver;
-
 public class SDloginStep extends SDBase{
 
     //@Before                                     //cucumber hooks digunakan disini klo tidak ada CucumberHooks
