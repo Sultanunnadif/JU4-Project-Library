@@ -9,11 +9,11 @@ public class SDBase {
     public static WebDriver driver;
 
     public void driverGet(){
-//        ChromeOptions options = new ChromeOptions(); //untuk headless atau tanpa eksekusi website
-//        options.addArguments("--headless");
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions(); //untuk headless atau tanpa eksekusi website
+        options.addArguments("--headless");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver(options);
 
-        driver = WebDriverManager.chromedriver().create();
+//        driver = WebDriverManager.chromedriver().create();
     }
 }
