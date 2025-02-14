@@ -1,0 +1,37 @@
+name: StepRunner
+
+#Triger / Kapan Action-nya jalan
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  AutomationStep:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    #Download Code dari Repo
+    - uses: actions/checkout@v4
+    
+    #Setup Java
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    #install Browser
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@v1.7.3
+
+    #Setup Gradlew
+    - name: Setup Gradlew
+      run: 
+        chmod +x gradlew 
+        ./gradlew cucumber   
+    
