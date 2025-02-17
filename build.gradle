@@ -37,7 +37,6 @@ task cucumber(){
             mainClass.set("io.cucumber.core.cli.Main") // Gunakan mainClass.set
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                    '--plugin', 'html:reports/test-report.html',
                     '--plugin', 'pretty',
                     '--glue', 'com.nadif',
                     '--tags', System.getProperty("tags", ""), // Properti tags
