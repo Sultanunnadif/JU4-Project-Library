@@ -47,4 +47,4 @@ jobs:
     
     #Bonus track step-report
     - name: Debug - List Files
-      run: ls -R path/to/reports
+      run: ls -R reports
