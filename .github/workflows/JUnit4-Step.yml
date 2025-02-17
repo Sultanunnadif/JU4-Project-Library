@@ -43,4 +43,4 @@ jobs:
       if: success() #always() # success() , failure(), canceled()
       with: 
           Name: JUnit4 Reports
-          path: target/index.html
+          path: reports/StepDefinitionReport.html
