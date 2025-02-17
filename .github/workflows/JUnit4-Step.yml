@@ -44,3 +44,7 @@ jobs:
       with: 
           Name: JUnit4 Reports
           path: reports/StepDefinitionReport.html
+    
+    #Bonus track step-report
+    - name: Debug - List Files
+      run: ls -R path/to/reports
