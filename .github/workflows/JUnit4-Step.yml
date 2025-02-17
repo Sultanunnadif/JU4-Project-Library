@@ -40,7 +40,7 @@ jobs:
     #hasil Test-Result
     - name: Archive Report
       uses: actions/upload-artifact@v4.3.0
-      if: success() #always() # success() , failure(), canceled()
+      if: always() #always() # success() , failure(), canceled()
       with: 
           Name: JUnit4 Reports
-          path: reports/StepDefinitionReport.html
+          path: reports/StepDefinitionReport.html, reports/test-report.html
