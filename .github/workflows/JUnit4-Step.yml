@@ -36,7 +36,6 @@ jobs:
     - name: Setup Gradlew
       run:
         chmod +x gradlew
-        ./gradlew build
 
     #run test
     - name: run test
