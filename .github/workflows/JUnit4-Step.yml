@@ -33,10 +33,12 @@ jobs:
         #chrome-options: '--no-sandbox --disable-gpu --headless --disable-dev-shm-usage'
 
     #Setup Gradlew
-    - name: Build gradle
-      run: 
-            chmod +x gradlew
-            ./gradlew build
+    - name: run gradle
+      run: chmod +x gradlew
+
+    #run Gradlew
+    - name: run gradlew
+      run: ./gradlew build
 
     #run test
     - name: run test
