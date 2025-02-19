@@ -40,8 +40,12 @@ jobs:
     - name: run gradlew
       run: ./gradlew build
 
+    #run gradlew clean test
+    - name: run clean test
+      run: ./gradlew clean test
+
     #run test
-    - name: run test
+    - name: run initial test
       run: ./gradlew cucumber
 
     #hasil Test-Result
