@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         glue = "com.nadif.stepdefinition",
         features = "src/test/resources/features",
-        plugin = {"pretty","html:reports/StepDefinitionReport.html","json:reports/StepDefinitionReport.json"}
+        plugin = {"pretty","html:target/cucumber-report.html"}
         //"pretty" memperliatkan report hasil test by Line
         //"html" untuk membuat report dalam bentuk HTML
         //"json" untuk membuat report dalam bentuk Json

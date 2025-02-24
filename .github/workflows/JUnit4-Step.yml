@@ -54,7 +54,7 @@ jobs:
       if: always() #always() # success() , failure(), canceled()
       with: 
           Name: JUnit4 Reports
-          path: build/reports/tests/test/index.html
+          path: target/cucumber-report.html
     
     #Bonus track step-report
     - name: Debug - List Files
